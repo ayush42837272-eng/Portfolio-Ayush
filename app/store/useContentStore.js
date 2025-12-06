@@ -6,7 +6,7 @@ export const useContentStore = create(() => ({
         navLinks: [
             { label: "About", href: "#about" },
             { label: "Skills", href: "#skills" },
-            { label: "Portfolio", href: "#projects" },
+            { label: "Projects", href: "#projects" },
         ],
         contactButton: "Contact Me",
     },
@@ -30,4 +30,31 @@ export const useContentStore = create(() => ({
     },
 
     watermarkWord: "AJ",
+
+  socialLinks: [
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/ayush-jais/",
+      icon: "/linkedin.svg"  
+    },
+    {
+      id: "github",
+      label: "GitHub",
+      href: "https://github.com/ayush42837272-eng",
+      icon: "/github.svg"    
+    },
+    {
+      id: "leetcode",
+      label: "LeetCode",
+      href: "https://leetcode.com/u/Ayush622/",
+      icon: "/leetcode.svg"  
+    },
+    {
+        id: "download",
+        label: "Download Resume",
+        href:"https://drive.google.com/file/d/1_LqHu4aS7mRxF8QBNv6mw2_2nbvwFCb-/view?usp=sharing",
+        icon:"/download.svg"
+    }
+  ],
 }));
