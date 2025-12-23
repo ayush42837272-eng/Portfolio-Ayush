@@ -9,12 +9,11 @@ export default function ProjectsPage() {
         min-h-screen 
         w-full 
         bg-white dark:bg-[#0f0f0f]
-        pt-10 md:pt-14   /* SMALLER TOP PADDING */
+        pt-10 md:pt-14   
         pb-16 
         px-4 sm:px-6 lg:px-10
       "
     >
-      {/* PAGE HEADING */}
       <h1
         className="
           text-3xl md:text-4xl font-bold tracking-widest 
@@ -24,12 +23,10 @@ export default function ProjectsPage() {
         PROJECTS
       </h1>
 
-      {/* DIVIDER */}
       <div className="flex justify-center mt-3 mb-10">
         <div className="w-20 h-[2px] bg-black dark:bg-white opacity-60"></div>
       </div>
 
-      {/* PROJECT LISTING */}
       <div className="max-w-7xl mx-auto w-full">
         <ProjectSection />
       </div>

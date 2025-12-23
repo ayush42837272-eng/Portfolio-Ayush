@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional base styles */
 :root {
   --bg: #ffffff;
   --muted: #6b7280;

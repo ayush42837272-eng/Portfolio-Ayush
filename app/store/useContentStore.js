@@ -57,7 +57,7 @@ export const useContentStore = create(() => ({
     {
       id: "download",
       label: "Resume",
-      href: "https://drive.google.com/file/d/1_LqHu4aS7mRxF8QBNv6mw2_2nbvwFCb-/view?usp=sharing",
+      href: "https://drive.google.com/drive/folders/1ZaudOS-4Gtb2zmYHY3wEMMal0GS8o6I7?usp=drive_link",
       icon: "/social/download.svg",
     },
     {
@@ -130,6 +130,18 @@ export const useContentStore = create(() => ({
       { id: 20, label: "Jest", icon: "/skills/Jest.svg" },
       { id: 21, label: "AngularJS", icon: "/skills/AngularJS.svg" },
     ],
+    rotationSkills:[
+      { id: 1, label: "HTML5", icon: "/skills/HTML5.svg" },
+      { id: 2, label: "JavaScript", icon: "/skills/JavaScript.svg" },
+      { id: 3, label: "React", icon: "/skills/React.svg" },
+      { id: 4, label: "Next.js", icon: "/skills/next.svg" },
+      { id: 5, label: "Git", icon: "/skills/Git.svg" },
+      {
+        id: 6,
+        label: "VS Code",
+        icon: "/skills/Visual Studio Code (VS Code).svg",
+      },
+    ]
   },
   projects: [
     {

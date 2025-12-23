@@ -66,7 +66,6 @@ export default function ContactForm() {
       animate={{ opacity: 1 }}
       className="space-y-8 max-w-xl mx-auto"
     >
-      {/* INPUTS */}
       {["name", "email", "phone"].map((field) => (
         <div key={field} className="relative w-full">
           <input
@@ -107,7 +106,6 @@ export default function ContactForm() {
         </div>
       ))}
 
-      {/* MESSAGE FIELD */}
       <div className="relative">
         <textarea
           name="message"
@@ -145,7 +143,6 @@ export default function ContactForm() {
         </p>
       </div>
 
-      {/* SUBMIT BUTTON */}
       <button
         type="submit"
         disabled={!formValid || loading}
