@@ -42,7 +42,8 @@ export default function Hero() {
         overflow-hidden
       "
     >
-      <div className="hidden md:block absolute inset-0 -z-20
+      <div
+        className="hidden md:block absolute inset-0 -z-20
         bg-gradient-to-br
         from-[#f2f2f2] to-[#e0e0e0]
         dark:from-[#0f0f0f] dark:to-[#141414]"
@@ -59,7 +60,6 @@ export default function Hero() {
       </div>
 
       <div className="md:hidden absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none">
-
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
@@ -95,19 +95,28 @@ export default function Hero() {
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto w-full px-6 grid md:grid-cols-2 items-center">
-
         <div className="flex flex-col items-start md:pl-20 lg:pl-24">
-          <p className="text-base text-gray-700 dark:text-gray-300 mb-2">
+          <p
+            className="text-base text-gray-700 dark:text-gray-300 mb-2"
+            aria-label="Introduction greeting"
+          >
             {heroData.heroGreeting}
           </p>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-black dark:text-white">
-            {heroData.heroName}
+          <h1
+            itemProp="name"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-black dark:text-white"
+          >
+            {heroData.heroName} – Senior Frontend Developer
           </h1>
 
-          <p className="text-base text-gray-600 dark:text-gray-400 mt-3 max-w-md">
+          <h2
+            itemProp="jobTitle"
+            className="text-base text-gray-600 dark:text-gray-400 mt-3 max-w-md"
+          >
             {heroData.heroTitle}
-          </p>
+          </h2>
+          <p className="sr-only">{heroData.seoDescription}</p>
 
           <div className="flex gap-4 mt-6">
             {socialLinks.map((item) => (
@@ -138,7 +147,6 @@ export default function Hero() {
 
         <div className="hidden md:flex justify-center items-center">
           <div className="relative w-[340px] h-[340px]">
-
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="w-24 h-24 rounded-full bg-white dark:bg-black shadow-xl flex items-center justify-center">
                 <Image

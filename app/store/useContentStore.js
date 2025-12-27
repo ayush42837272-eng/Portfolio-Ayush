@@ -17,7 +17,8 @@ export const useContentStore = create(() => ({
   hero: {
     heroGreeting: "Hi, I am",
     heroName: "Ayush Jaiswal",
-    heroTitle: "Front-end Developer • UI Engineer",
+    heroTitle: "Front-end Developer • UI Developer",
+    seoDescription:"Ayush Jaiswal is a Senior Frontend Developer with 6+ years of experience specializing in React.js, Next.js, TypeScript, and scalable, high-performance web applications."
   },
 
   highlight: {
