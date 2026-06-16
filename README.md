@@ -1,83 +1,91 @@
-# 👋 Ayush Jaiswal — Frontend Developer & UI Engineer
+# Ayush Jaiswal — Developer Portfolio
 
-This is my personal developer portfolio showcasing my experience, skills, and real-world projects built as a Frontend Developer and UI Engineer.
+A clean, fully responsive developer portfolio built with Next.js, Tailwind CSS, and Framer Motion. Features dark/light mode, smooth animations, experience timeline, skills showcase, project gallery, and a working contact form.
 
-The portfolio focuses on clean UI, responsive layouts, subtle animations, and scalable frontend architecture, reflecting the kind of production-ready systems I’ve worked on in enterprise and product-based environments.
-
----
-
-## 🚀 Live Demo
-🔗 **Portfolio:** https://ayushjaiswal.vercel.app/
+🔗 **Live Demo:** https://ayushjaiswal.vercel.app/
 
 ---
 
-## 🧑‍💻 About Me
+## Use This as Your Own Portfolio
 
-I am a Frontend Developer with **6+ years of experience** building modern, high-performance web applications using **React.js, Next.js, and JavaScript**.
+All content is in a single file — no coding knowledge needed.
 
-I have worked on:
-- Enterprise dashboards  
-- Government platforms  
-- Automation systems  
-- Scalable UI components  
-- Performance-optimized frontend architectures  
+**Steps:**
 
-I enjoy crafting intuitive user experiences with clean, maintainable code.
+1. Fork or clone this repo
+   ```bash
+   git clone https://github.com/ayush6222/Portfolio-Ayush.git
+   cd Portfolio-Ayush
+   npm install
+   ```
+
+2. Open `app/store/useContentStore.js` and replace:
+   - Your name, title, and summary
+   - Your experience (company, role, dates, points)
+   - Your skills (add/remove as needed)
+   - Your projects (name, description, tech, images)
+   - Your social links (LinkedIn, email, resume)
+
+3. Add your project images to `public/Projects/` and skill icons to `public/skills/`
+
+4. Run locally:
+   ```bash
+   npm run dev
+   ```
+
+5. Deploy free on Vercel:
+   - Push to GitHub
+   - Go to vercel.com → Import repo → Deploy
+   - Done ✅
 
 ---
 
-## 🛠 Tech Stack
+## Contact Form Setup (EmailJS)
 
-- **Frontend:** React.js, Next.js, JavaScript (ES6+)
-- **Styling:** Tailwind CSS, CSS3, Responsive Design
+1. Create a free account at emailjs.com
+2. Add Gmail as email service
+3. Create an email template
+4. Create `.env.local` in root:
+   ```
+   NEXT_PUBLIC_EMAILJS_SERVICE=your_service_id
+   NEXT_PUBLIC_EMAILJS_TEMPLATE=your_template_id
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+5. Add the same variables in Vercel dashboard → Project Settings → Environment Variables
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16, React 19
+- **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
-- **State Management:** Zustand, Redux
-- **Tooling:** Git, GitHub, Webpack, Vite
-- **UI/UX:** Component-driven design, accessibility-first approach
+- **State:** Zustand
+- **Contact:** EmailJS
+- **Deploy:** Vercel
 
 ---
 
-## ✨ Features
+## Features
 
-- Fully responsive design (mobile, tablet, desktop)
-- Dark / Light theme support
-- Interactive animations and motion effects
-- Clean, modular component architecture
-- Optimized for performance and readability
-- Real-world project showcase
-
----
-
-## 📂 Featured Projects
-
-The portfolio includes selected projects such as:
-- **Enterprise B2B Dashboards**
-- **Automation & Workflow Systems**
-- **Government Platforms**
-- **Product-based Web Applications**
-
-Each project highlights:
-- Problem statement
-- Tech stack
-- UI/UX decisions
-- Implementation approach
+- Single source of truth — all content in one file
+- Dark / Light theme with localStorage persistence
+- Fully responsive — mobile, tablet, desktop
+- Experience timeline with company logos
+- Skills section with categories (Using Now, Generative AI, Exploring)
+- Project gallery with image modal
+- Working contact form
+- Scroll progress bar
+- SEO optimized with structured data
 
 ---
 
-## 📸 Preview
+## Contact
 
-> Screenshots and live previews are available directly on the portfolio website.
-
----
-
-## 📬 Contact
-
+- **Portfolio:** https://ayushjaiswal.vercel.app/
 - **LinkedIn:** https://www.linkedin.com/in/ayush-jais/
-- **GitHub:** https://github.com/ayush42837272-eng
 - **Email:** ayush42837272@gmail.com
 
 ---
 
----
-
-⭐ If you like this portfolio, feel free to star the repository!
+⭐ Star this repo if it helped you!
