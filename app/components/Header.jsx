@@ -5,15 +5,21 @@ import Link from "next/link";
 import { FiSun, FiMoon } from "react-icons/fi";
 import useTheme from "../hooks/usetheme";
 import { useContentStore } from "../store/useContentStore";
+import { useSmoothNavigate } from "../utils/smoothNavigate";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const headerData = useContentStore((s) => s.header);
+  const { goTo } = useSmoothNavigate();
 
   const handleNavClick = (href) => {
     setOpen(false);
-    window.location.assign(href);
+    if (href.startsWith("#")) {
+      goTo(href);
+    } else {
+      window.location.assign(href);
+    }
   };
 
   return (
@@ -28,7 +34,7 @@ export default function Header() {
             {headerData.navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => window.location.assign(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className="text-white dark:text-black hover:opacity-70 transition"
               >
                 {link.label}
@@ -37,6 +43,7 @@ export default function Header() {
 
             <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
               className="p-2 rounded-full transition bg-white text-black dark:bg-black dark:text-white"
             >
               {theme === "light" ? <FiMoon /> : <FiSun />}

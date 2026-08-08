@@ -16,15 +16,20 @@ export function useSmoothNavigate() {
     window.scrollTo({ top, behavior: "smooth" });
   };
 
+  const waitForSection = (id, attemptsLeft = 20) => {
+    if (document.querySelector(id)) {
+      scrollToSection(id);
+    } else if (attemptsLeft > 0) {
+      setTimeout(() => waitForSection(id, attemptsLeft - 1), 100);
+    }
+  };
+
   const goTo = (id) => {
     if (pathname === "/") {
       scrollToSection(id);
     } else {
-      router.push("/");
-
-      setTimeout(() => {
-        scrollToSection(id);
-      }, 400); 
+      router.push("/", { scroll: false });
+      waitForSection(id);
     }
   };
 

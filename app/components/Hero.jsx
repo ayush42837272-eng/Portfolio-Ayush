@@ -81,6 +81,9 @@ export default function Hero() {
           <h2 itemProp="jobTitle" className="text-base text-gray-600 dark:text-gray-400 mt-3 max-w-md">
             {heroData.heroTitle}
           </h2>
+          <p className="text-sm font-medium text-gray-800 dark:text-gray-200 mt-2 max-w-sm">
+            {heroData.heroImpact}
+          </p>
           <p className="sr-only">{heroData.seoDescription}</p>
 
           <div className="flex gap-4 mt-6">

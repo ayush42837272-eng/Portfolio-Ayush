@@ -1,5 +1,14 @@
 import Header from "@/app/components/Header";
-import ProjectsPageContent from "@/app/components/Projects/page";
+import ProjectsPageContent from "@/app/components/Projects/ProjectsContent";
+
+export const metadata = {
+  title: "Projects | Ayush Jaiswal — Full Stack AI Engineer",
+  description:
+    "Projects by Ayush Jaiswal: Generative AI platforms, AI agents built with Claude API and MCP, and React.js/Next.js enterprise applications serving 500K+ users.",
+  alternates: {
+    canonical: "/projects",
+  },
+};
 
 export default function ProjectsRoute() {
   return (

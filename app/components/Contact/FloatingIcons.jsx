@@ -24,7 +24,8 @@ export default function FloatingIcons({ side }) {
             src={icon.src || "/placeholder.svg"}
             width={icon.size}
             height={icon.size}
-            alt="floating-icon"
+            alt=""
+            aria-hidden="true"
             className="opacity-60 dark:invert-0"
           />
         </motion.div>
